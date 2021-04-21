@@ -1,0 +1,77 @@
+<%- include('../parts/head', {bot, user, path}) %>
+<style>
+  h1 {
+    color: #fFf;
+  }
+
+</style>
+<br><br><br>
+<div class="container">
+<a href="/uptime/add" style="float: right;" class="btn btn-primary has-text-white mb-3">Link Ekle</a>
+<table id="tableData" class="table table-dark table-striped" data-toggle="table" data-pagination="true" data-search="true">
+  <thead>
+  <th>Uptime Link</th>
+  <th>Uptime Code</th>
+  <th>İşlem</th>
+  </thead>
+          <% uptimes.map(a => {%>
+            <tr>
+                <td><%= a.link %></td>
+                <td><%= a.code %></td>
+              <td><a onclick='deletequest("<%= a.code %>")' class="btn btn-danger">Sil</a></td>
+            </tr>
+         <% }); %>
+</table>
+</div>
+
+<br><br><br>
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.has('success') && urlParams.get('success')){
+    Swal.fire({
+     icon: 'Başarılı',
+     title: 'Başarılı...',
+     closeOnConfirm: false,
+     text: urlParams.get('message'),
+     footer: 'Copyright 2021 © CodeList'
+    }).then((result) => {
+  if (result.isConfirmed) {
+    window.location.href = '/uptime/links';
+  }
+})
+    }
+    if(urlParams.has('error') && urlParams.get('error')){
+    Swal.fire({
+     icon: 'error',
+     title: 'Oops...',
+     text: urlParams.get('message'),
+     footer: 'Copyright 2021 © CodeList'
+    }).then((result) => {
+  if (result.isConfirmed) {
+    window.location.href = '/uptime/links';
+  }    
+})
+    }
+function deletequest(uptimecode) {
+Swal.fire({
+  title: 'Emin misin?',
+  text: "Seçtiğiniz bağlantıyı kalıcı olarak silmek istediğinizden emin misiniz?",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Evet, silinsin!',
+  cancelButtonText: 'Hayır, iptal edin!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    window.location.href = '/uptime/'+uptimecode+'/delete';
+  } else {
+    Swal.fire(
+      'İptal edildi..',
+      'Link başarıyla iptal edildi.',
+      'error'
+    )
+  }
+})
+}
+   </script>
+<%- include('../parts/foot') %>

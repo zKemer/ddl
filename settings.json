@@ -1,0 +1,12 @@
+{
+  "token": "ODI2ODE1NjgyMTQ1NTUwNDU2.YGR-HA.XW-E6J-5hfSH18xxVHhlYBlCWF4",
+  "prefix" : "!",
+  "owner" : ["798901741256704052","630285756337881108","785765015487381525", "765949360080814081"],
+  "clientid" : "801705875273678890",
+  "clientsecret" : "Zig0Hh6QQEdcLXCxFY1A-kgvvVzix5Co",
+  "clientcallback" : "https://www.codelist.ml/callback",
+  "mongoURL" : "mongodb+srv://ardatunakaya:Arda9506Tuna@cluster0.fr58x.mongodb.net/filipscode?retryWrites=true&w=majority",
+  "serverID": "831416581568331786",
+  "footer": "Copyright 2021 CodeList  © Designed by vCodes",
+  "tags": ["Moderasyon", "Eğlence", "Minecraft","Ekonomi","Koruma","NSFW","Anime","Davet","Müzik","Kayıt", "Level","Türk"]
+} 

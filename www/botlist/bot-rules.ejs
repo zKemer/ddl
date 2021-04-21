@@ -1,0 +1,49 @@
+<%- include('../parts/head', {bot, user, path}) %>
+<title>Kurallar | CodeList  </title>
+<style>
+strong {
+color: gray;
+}
+</style>
+<div class="container px-3 mt-2 pt-5">
+    <div class="container px-3 content is-widescreen pt-5">
+        <div class="bg-vote-vcodes pt-5">
+            <p class="has-text-white is-size-4" style="text-decoration: underline" >Bot Ekletme Kuralları</p>
+            <p style="text-align: none;"class="text-muted">
+&raquo <strong>1.</strong> Bot ekleme koşulları aşağıdaki gibidir.<br>
+  &nbsp;&nbsp;<strong>a.</strong> Bir etiket seçmelisiniz.<br>
+  &nbsp;&nbsp;<strong>b.</strong> Botunuzun ID'sini doğru giriniz.<br>
+  &nbsp;&nbsp;<strong>c.</strong> Botunuz en az 2 haftalık olmalıdır.<br>
+  &nbsp;&nbsp;<strong>d.</strong> Diğer botlara benzememelidir.<br>
+  &nbsp;&nbsp;<strong>e.</strong> Botunun profil fotoğrafı başka botlara benzememelidir.<br><br>
+&raquo <strong>2.</strong> Dikkat etmeniz gerekenler.<br>
+  &nbsp;&nbsp;<strong>a.</strong>  İlgisiz herhangi bir siteye yönlendirmemelisiniz.<br>
+  &nbsp;&nbsp;<strong>b.</strong> Başka bir bot listesi sitesini iframe olarak koymamalısınız.<br>
+  &nbsp;&nbsp;<strong>c.</strong> Çıplaklık içeren resimler göndermemelisiniz.<br>
+  &nbsp;&nbsp;<strong>d.</strong> Botunuz hakkında detaylı bilgi vermelisiniz.<br>
+  &nbsp;&nbsp;<strong>e.</strong> Botunuz hakkında detaylı bilgi verirken resimlerde kullanmalısınız.<br>
+  &nbsp;&nbsp;<strong>f.</strong> Doğru prefix (ön ek) girmelisiniz.<br>
+  &nbsp;&nbsp;<strong>g.</strong> Botunuzun sitesini bir iframe olarak koymanız veya botunuzun komutlarını yazmanız gerekir.<br><br>
+&raquo <strong>3.</strong> İzin verilmeyen bot komutları.<br>
+  &nbsp;&nbsp;<strong>a.</strong> Botunuzda başka bir bot reklamı yapılmamalıdır.<br>
+  &nbsp;&nbsp;<strong>b.</strong> Botunuzun hiçbir komutunda epilepsi krizine neden olacak emoji olmamalıdır.<br>
+  &nbsp;&nbsp;<strong>c.</strong> Botunuzun komutları benzersiz olmalıdır.<br>
+  &nbsp;&nbsp;<strong>d.</strong> Botunuzda toplu işleme komutları olmamalıdır.<br>
+  &nbsp;&nbsp;<strong>e.</strong> Botunuzun herhangi bir yasaklanmış komutu olmamalıdır.<br>
+<br><br>
+&raquo Yasaklanmış Komutlar.<br>
+  <strong>1.</strong> Herkese Rol Ver / Al<br>
+  <strong>2.</strong> Sunucuyu Patlat<br>
+  <strong>3.</strong> DM Duyuru<br>
+  <strong>4.</strong> Spam<br>
+  <strong>5.</strong> Özel Mesaj Gönderme
+                </p>
+            <br>
+        </div>
+    </div>
+    <center>
+    <button onclick="location.href='/addbot'" class="btn btn-back"><i class="fad fa-check"></i>&nbsp; Kuralları kabul et.</button>
+    </center>
+</div>
+
+<%- include('../parts/foot') %>

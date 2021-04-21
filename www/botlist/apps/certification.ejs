@@ -1,0 +1,40 @@
+<%- include('../../parts/head', {bot, user, path}) %>
+<title>Certification | Discord Bots</title>
+<div class="container px-3 mt-2 pt-5">
+    <div class="container px-3 content is-widescreen pt-5">
+        <div class="bg-vote-vcodes pt-5">
+            <h3 class="has-text-white is-size-3" style="margin-bottom: 10px;"> </h3>
+            <p class="has-text-white">&raquo&raquo Sertifika Kuralları</p>
+            <p class="text-muted">
+                &raquo Botunuz en az 5 gündür sitemizde olmalı.
+                <br>&raquo 7/24 barındırılmalıdır. Küçük bakım yapmak veya hataları düzeltmek için yalnızca kısa duruş süreleri kabul edilir.
+                <br>&raquo Altyapı olmamalıdır.
+                <br>&raquo Mevcut başka bir projeden çatallanmamalı.
+                <br>&raquo Botun özellikleri hakkında çok net belgeler sağlayan bir siteye veya GitHub deposuna sahip olmalıdır.
+                <br>&raquo 60'dan fazla sunucusu olmalıdır.
+                </p>
+            <br>
+            <p class="has-text-white">&raquo&raquo Sertifika Avantajları</p>
+            <p class="text-muted">
+                <br>&raquo&raquo Botlar için
+                <br>&raquo  Discord sunucumuzda, insanların sertifikalı olduğunu bilmelerini sağlayan özel bir rol.
+                <br>&raquo Özel rol ve emoji(                <span data-tooltip="<%=bot.guilds.cache.get(config.serverID).roles.cache.get(roles.certified_bot).name%>" data-tooltip-location="top"> 
+                    <i class="fad fa-badge-check has-text-primary" style="font-size: 20px;"></i>
+                    </span>) botuna özel emoji ve rol gelir
+                
+                <br><br>&raquo&raquo Bot geliştiricileri için
+                
+                <br>&raquo Discord sunucumuzda, kişilerin sertifikalı olduğunuzu bilmelerini sağlayan özel bir rol.
+                <br>&raquo Özel rol ve emoji(                <span data-tooltip="<%=bot.guilds.cache.get(config.serverID).roles.cache.get(roles.certified_developer).name%>" data-tooltip-location="top"> 
+                    <i class="fad fa-badge-check" style="color: <%=bot.guilds.cache.get(config.serverID).roles.cache.get(roles.certified_developer).hexColor%>;font-size: 20px;"></i>
+                    </span>) kişilere sertifikalı olduğunuzu bildirmek için profilinizde bu emoji gözükür.
+                </p>
+            <br>
+        </div>
+    </div>
+    <center>
+    <button onclick="location.href='/certification/apply'" class="btn btn-back"><i class="fad fa-check"></i>&nbsp;Botun Adına Başvur.</button>
+    </center>
+</div>
+
+<%- include('../../parts/foot') %>
